@@ -1,14 +1,18 @@
 {
-  "name": "Rentalx",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "RenanEstery20 <renanestery1@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "@types/express": "^4.17.14",
-    "express": "^4.18.1"
-  },
-  "devDependencies": {
-    "typescript": "^4.8.3"
-  }
+    "name": "Rentalx",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "RenanEstery20 <renanestery1@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/server.ts"
+    },
+    "dependencies": {
+        "@types/express": "^4.17.14",
+        "express": "^4.18.1"
+    },
+    "devDependencies": {
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^4.8.3"
+    }
 }
