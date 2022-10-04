@@ -3,6 +3,7 @@ import swaggerUi from "swagger-ui-express";
 import 'reflect-metadata';
 import {Request, Response, NextFunction} from "express"
 import "express-async-errors"
+import cors from 'cors'
 
 
 import { router } from './routes'
@@ -16,6 +17,8 @@ import { AppError } from './errors/AppError';
 const app = express()
 
 app.use(express.json())
+
+app.use(cors())
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
